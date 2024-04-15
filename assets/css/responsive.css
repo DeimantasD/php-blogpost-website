@@ -1,0 +1,127 @@
+/* ==== MEDIA ==== */
+
+@media (max-width: 800px){
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .signup-form {
+    width: 80%;
+  }
+
+  .signup-form-form input {
+    width: 90%;
+  }
+
+  #add-blog .form {
+    width: 70%;
+  }
+
+  .blog-details-wrapper {
+    width: 90%;
+  }
+
+  .blog-details {
+    padding: 20px;
+  }
+
+  .update-blog {
+    width: 80%;
+  }
+
+  .error-container h1 {
+    font-size: 3em;
+  }
+
+  .error-container p {
+    font-size: 1.5em;
+  }
+
+}
+
+
+@media (max-width: 550px){
+  .recent-blogs {
+    width: 90%;
+  }
+
+  .all-blogs {
+    width: 90%;
+  }
+
+  .all-blogs-blog {
+    width: 100%;
+  }
+  #add-blog .form {
+    width: 95%;
+  }
+
+  .profile-container {
+    width: 80%;
+  }
+
+  .profile-blogs {
+    width: 90%;
+  }
+
+  .blogs-container .blog {
+    width: 95%;
+  }
+
+  .update-blog {
+    width: 90%;
+  }
+
+  .update-blog form input {
+    font-size: 15px;
+  }
+
+  .update-blog form textarea {
+    font-size: 15px;
+  }
+ 
+  .error-container h1 {
+    font-size: 2.5em;
+  }
+
+  .error-container p {
+    font-size: 1em;
+  }
+
+  
+}
+
+
+
+@media (max-width: 400px){
+  .sidebar {
+    width: 100%;
+  }
+
+  .all-blogs .blog-info .author {
+    font-size: 10px;
+  }
+
+  .details-buttons input[type="submit"] {
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+
+  .blog-details {
+    padding: 10px;
+  }
+
+  .blog-details .content p {
+    font-size: 12px;
+  }
+
+  .error-container h1 {
+    font-size: 2em;
+  }
+
+  
+}

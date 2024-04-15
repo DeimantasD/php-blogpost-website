@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Monserrat", sans-serif;
+}
+  
+
+body {
+  padding-top: 60px;
+  min-height: 100vh;
+  background-image: url('../img/laptop.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header li, header a, header button, header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+
+/* ================ NAVBAR ============== */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
+  background-color: #ffffff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+
+}
+
+
+nav {
+  background-color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+nav a:hover {
+  background-color: #f0f0f0;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #ffffff2f;
+  backdrop-filter: blur(20px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+.menu-button {
+  display: none;
+}
+
+
+
+
+/* ================ RECENT BLOGS  ============== */
+
+
+ .recent-blogs {
+  width: 70%; 
+  margin: 30px auto;
+  background: rgba(250, 232, 232, 0.8);
+  backdrop-filter: blur(4px);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+ .recent-blogs h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px #220909;
+}
+
+ .blogs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+ .blog {
+  width: 280px;  
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+ .blog:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+ .blog .blog-image {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+ .blog .blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+ .blog .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+ .blog:hover .overlay {
+  opacity: 1;
+}
+
+ .blog-link {
+  text-decoration: none;
+  color: #333; 
+}
+
+ .blog-link:hover {
+  color: #555;
+}
+
+ .blog-info {
+  padding: 20px;
+}
+
+ .blog-info .title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+ .blog-info .date {
+  color: #666; 
+  font-size: 14px;
+}
+
+/* ================ ALL BLOGS ============== */
+
+.all-blogs {
+  width: 70%; 
+  margin: 50px auto;
+  background: rgba(250, 232, 232, 0.8);
+  backdrop-filter: blur(4px);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.all-blogs h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px #220909;
+}
+
+.all-blogs-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.all-blogs-blog {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.all-blogs .blog {
+  width: 100%;
+  position: relative;
+}
+
+.all-blogs .blog-link {
+  display: flex;
+  text-decoration: none;
+  color: #333;
+}
+
+.all-blogs .blog-image {
+  flex: 0 0 30%;
+  overflow: hidden;
+}
+
+.all-blogs .blog-image img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.all-blogs .blog-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  padding: 0 20px;
+}
+
+.all-blogs .blog-info .author {
+  margin: 10px 0;
+  font-size: 12px;
+}
+
+.all-blogs .title {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.all-blogs .date {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+#recent h5.no-blogs, .all-blogs-wrapper h5.no-blogs,.blogs-container h5.no-blogs {
+  text-align: center;
+  font-size: 50px;
+  margin: 0 auto;
+}
+
+
+/* ================ ADD A BLOG ============== */
+
+
+
+
+#add-blog {
+  margin-top: 20px;
+}
+
+#add-blog h4 {
+  font-size: 2em;
+  margin: 30px 0;
+  text-align: center;
+}
+
+#add-blog .form {
+  width: 50%;
+  backdrop-filter: blur(50px);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  
+}
+
+#add-blog .form label {
+  display: block;
+  margin: 15px 0;
+  color: rgb(139, 75, 75);
+  font-weight: bold;
+}
+input, textarea {
+  font-size: 20px;
+}
+
+#add-blog .form input[type="text"],
+#add-blog .form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#add-blog .form textarea {
+  resize: none;
+}
+
+#add-blog .form input[type="submit"] {
+  background-color: #2e82e2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+#add-blog .form input[type="submit"]:hover {
+  background-color: #5091db;
+ 
+}
+
+
+.error {
+  font-size: 12px;
+  color: rgb(252, 2, 2);
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+
+
+
+/* ================ DETAILS ============== */
+
+.blog-details-wrapper {
+  width: 70%;
+  margin: 30px auto;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-details {
+  padding: 30px;
+}
+
+.blog-details .blog-info {
+  text-align: center;
+}
+
+
+.blog-details h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.blog-details .blog-info p {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+
+
+.blog-details .blog-info p span {
+  color: #666;
+  overflow-wrap: break-word;
+}
+
+.blog-details .blog-info p.date {
+  font-size: 14px;
+}
+
+.blog-details .content {
+  margin-top: 30px;
+  line-height: 27px;
+}
+
+.details-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.details-buttons form {
+  margin-right: 10px;
+}
+
+.details-buttons input[type="submit"] {
+  background: rgb(243, 11, 11);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.details-buttons input[type="submit"]:hover {
+  background: rgb(252, 78, 78);
+}
+
+.details-buttons input[type="submit"].update-btn {
+  background: rgb(85, 87, 219);
+}
+
+.details-buttons input[type="submit"].update-btn:hover {
+  background: rgb(136, 138, 219);
+}
+
+.blog-details .noblogs {
+  text-align: center;
+  color: #666;
+}
+
+
+/* ======================   SIGN UP - LOGIN ================= */
+
+
+.signup-form {
+width: 50%;
+margin: 30px auto;
+}
+
+.signup-form h2 {
+  text-align: center;
+  margin: 30px;
+}
+
+.signup-form-form form {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.signup-form-form input{
+  width: 60%;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.signup-form-form button{
+  color: #FFF;
+  width:60%; ;
+  margin: 10px auto;
+  padding: 14px 12px;
+  
+  background: rgb(5, 179, 223);
+  border-radius: 10px;
+  border: none;
+}
+
+.signup-form-form button:hover {
+  background: rgb(5, 159, 197);
+  cursor: pointer;
+}
+
+.signup-error {
+  font-size: 20px;
+  text-align: center;
+  color: red;
+  margin-top: 20px;
+}
+
+.signup-succ {
+font-size: 20px;
+text-align: center;
+margin-top: 20px;
+color: rgb(103, 101, 233);
+}
+
+/* ==================   PROFILE   =====================*/
+
+.profile-container {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  width: 60%;
+  margin: 30px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.profile-info {
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.profile-info h2 {
+  text-align: center;
+}
+
+.profile-info p {
+  margin: 20px;
+ 
+}
+
+.profile-info p.label {
+  font-weight: bold;
+}
+
+.profile-info p span {
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+.profile-blogs h2 {
+  text-align: center;
+  text-align: center;
+  margin: 50px 0;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px #220909;
+}
+
+.profile-blogs {
+  width: 70%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.blogs-container {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+
+
+.blogs-container .blog {
+ margin: 30px auto;
+
+}
+
+
+
+/* ================    UPDATE   ================ */
+
+.update-blog {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.update-blog h2 {
+  text-align: center;
+  font-size: 2em;
+  margin: 15px 0;
+}
+
+.update-blog form {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  padding: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.update-blog label {
+  font-weight: bold;
+}
+
+.update-blog form input {
+  padding: 10px;
+}
+
+.update-blog input[type="text"]{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.update-blog form textarea {
+  resize: none;
+  height: 300px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.update-blog input[type="submit"] {
+background: rgb(61, 135, 231);
+color: #fff;
+border-radius: 4px;
+border: none;
+cursor: pointer;
+}
+.update-blog input[type="submit"]:hover {
+  background: rgb(105, 161, 235);
+  
+}
+
+
+
+/* ===========    ERROR PAGE     ======== */
+
+.error-container {
+  width: 70%;
+  margin: 50px auto;
+  text-align: center;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.error-container h1 {
+  margin: 30px 0;
+  font-size: 4em;
+}
+
+.error-container p {
+  margin: 10px 0;
+  font-size: 2em;
+}
+
+
+
+/* =========    FOOTER    ========== */
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+
